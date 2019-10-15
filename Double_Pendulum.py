@@ -35,7 +35,7 @@ class DouPen(Scene):
 			return dydx
 		# create a time array from 0..100 sampled at 0.05 second step
 		dt = 0.05
-		t = np.arange(0.0, 20, dt)
+		t = np.arange(0.0, 60, dt)
 		# th1 and th2 are the initial angles (degrees)
 		# w10 and w20 are the initial angular velocities (degrees per second)
 		# initial state
@@ -85,7 +85,7 @@ class DouPen(Scene):
 		self.play(Write(line2))
 		line2.add_updater(lambda m: m.become(Line(Blob1.get_center(),Blob2.get_center(),color=xcol2l)))
 		self.add(Blob2,line2)
-		#label = TexMobject(f"Mass1={x},Mass2={y}").scale(2.5).to_edge(LEFT,buff=1)
+		
 
 		p1.fade(1)
 		p2.fade(1)
